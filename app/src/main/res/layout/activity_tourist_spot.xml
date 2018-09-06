@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.adnroid.bstech.cuadmissionfriend.TouristSpot"
+    android:background="@drawable/bg_layout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView_spot_list"
+        android:visibility="visible"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="3dp"
+                    android:textAlignment="center"
+                    android:text="ভ্রমণ পিপাষু মানুষের জন্য চট্টগ্রাম বিশ্ববিদ্যালয়ে রয়েছে আকর্ষনীয় সব স্থান। সবুজে ঘেরা এসব স্থান যেকারো মন ভাল করতে বাধ্য। নিচে চটগ্রাম বিশ্ববিদ্যালয়ের আকর্ষনীয় সব স্থানের তালিকা দেয়া হল। যেকোন আইটেমে ক্লিক করলে এর সম্পর্কে বিস্তারিত জানতে পারবেন।"
+                    android:background="@color/color_bg_Notice"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout_touristSpot">
+
+                <include layout="@layout/layout_spot_list"/>
+                <include layout="@layout/layout_spot_list"/>
+                <include layout="@layout/layout_spot_list"/>
+                <include layout="@layout/layout_spot_list"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar_touristSpot"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAsh"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout_load_error"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="উফফ!! ইন্টারনেট কাজ করছে না"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="#eb2a01"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="আপনার ইন্টারনেট কানেকশন চেক করুন এবং এখানে চাপুন"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorDark"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

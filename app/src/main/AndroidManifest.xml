@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.adnroid.bstech.cuadmissionfriend">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         f location permissionsor the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Circular"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".Faculty"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".Blog"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".TouristSpot"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".FacultyDetails"
+            android:parentActivityName=".Faculty"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".UnitDetails"
+            android:parentActivityName=".Circular" />
+
+        <activity
+            android:name=".Process"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".SpotDetails"
+            android:parentActivityName=".TouristSpot"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".PostView"
+            android:parentActivityName=".Blog" />
+
+        <activity
+            android:name=".PictureView"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".LocationMap">
+
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity android:name=".GoogleMap"
+            android:parentActivityName=".MainActivity">
+
+             <!--<intent-filter>-->
+                 <!--<action android:name="android.intent.action.MAIN" />-->
+
+                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
+             <!--</intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>

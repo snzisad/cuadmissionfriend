@@ -1,0 +1,125 @@
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardView_post_list"
+    android:foreground="?android:selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAsh"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="নতুন পোষ্ট"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/textView_post_title"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_cancel"
+                android:layout_alignBottom="@+id/textView_post_title"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/imageView_close"
+                android:layout_marginRight="5dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorLight"/>
+
+        <EditText
+            android:id="@+id/editText_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorLight"
+            android:hint="আপনার নাম"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/editText_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorLight"
+            android:gravity="top"
+            android:hint="পোষ্ট টাইটেল"
+            android:lines="2"
+            android:padding="5dp"
+            android:textSize="14dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="বর্ননা"
+            android:gravity="top"
+            android:background="@color/colorLight"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:padding="5dp"
+            android:lines="4"
+            android:textSize="14dp"
+            android:id="@+id/editText_post_content"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorLight"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="পোষ্ট করুন"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorLight"
+            android:layout_margin="8dp"
+            android:layout_gravity="right"
+            android:id="@+id/button_submit_post"
+            android:visibility="visible"
+            />
+
+        <ProgressBar
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="40dp"
+            android:id="@+id/progressBar_new_post"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

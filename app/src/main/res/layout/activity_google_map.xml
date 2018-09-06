@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_layout"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".GoogleMap">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/autoCompleteTextView_location"
+            android:hint=" আপনি কোথায় যেতে চান?"
+            android:inputType="textPersonName"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/button_view_route"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/autoCompleteTextView_location"
+            android:text=" ম্যাপ দেখুন"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button_background"
+            android:textColor="@color/colorLight"
+            android:layout_alignParentLeft="true"
+            android:visibility="visible"/>
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_layout"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".UnitDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView_admission_process"
+        android:visibility="visible"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/bg_item"
+                    android:layout_gravity="center_vertical"
+                    android:padding="1dp"
+                    android:src="@drawable/ic_process"
+                    android:layout_marginRight="5dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="আবেদন পক্রিয়া"
+                    android:textColor="@color/colorDark"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorBorder"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="পদ্ধতি"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDark"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_process"
+                android:layout_gravity="left"
+                android:textSize="13dp"
+                android:textColor="@color/colorDark"
+                android:id="@+id/textView_unit_process"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorBorder"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="উদাহরণ"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDark"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SSC 102030 2015 CHI HSC 304020 2018 CHI A,C,D এভাবে লিখে পাঠাতে হবে ১৬২২২ নম্বরে "
+                android:layout_gravity="left"
+                android:textSize="13dp"
+                android:textColor="@color/colorDark"
+                android:id="@+id/textView_unit_process_example"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorBorder"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAsh"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout_load_error"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="উফফ!! ইন্টারনেট কাজ করছে না"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="#eb2a01"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="আপনার ইন্টারনেট কানেকশন চেক করুন এবং এখানে চাপুন"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorDark"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

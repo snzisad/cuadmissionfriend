@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CU Admission Friend</string>
+    <string name="title_activity_blog">Blog</string>
+    <string name="title_process">মোবাইলের মেসেজ অপশন থেকে SSC (space) আপনার SSC পরীক্ষার Roll নম্বর (space) SSC পাশের সাল (space) SSC এর বোর্ডের নামের প্রথম ৩ অক্ষর (space) HSC space HSC এর রোল নম্বর (space) HSC পাশের সাল (space) HSC এর বোর্ডের নামের প্রথম ৩ অক্ষর (space) যে যে ইউনিটের জন্য আবেদন করতে চান তাদের নাম (কমা দিয়ে) লিখে যেকোন টেলিটক SIM কার্ড থেকে পাঠিয়ে দিন 16222 নম্বরে</string>
+
+    <string name="title_activity_image_view">ImageView</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_location_map">যাতায়ত ম্যাপ</string>
+</resources>

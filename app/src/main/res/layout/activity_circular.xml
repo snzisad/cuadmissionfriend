@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.adnroid.bstech.cuadmissionfriend.Circular"
+    android:background="@drawable/bg_layout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/scrollView_unit_list"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#e6efcf"
+                    android:padding="3dp"
+                    android:text="ভর্তি পরীক্ষার্থীদের সুবিধার জন্য চট্টগ্রাম বিশ্ববিদ্যালয়ের সব বিভাগকে নিন্মোক্ত ইউনিটে ভাগ করা হয়েছে। নিচে
+যেকোন ইউনিটে ক্লিক করলে উক্ত ইউনিট সম্পর্কে বিস্তারিত তথ্য জানতে পারবেন।"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_unit_list"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+    </ListView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar_unit"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAsh"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearLayout_load_error"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="উফফ!! ইন্টারনেট কাজ করছে না"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textColor="#eb2a01"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="আপনার ইন্টারনেট কানেকশন চেক করুন এবং এখানে চাপুন"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorDark"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_layout"
+    tools:context=".SpotDetails"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coordinatorLayout_spot_details"
+        android:visibility="visible">
+
+        <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/colorPrimary"
+            android:id="@+id/custom_collapsing_toolbar"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="pin"
+                android:id="@+id/imageView_spot_image"/>
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/custom_toolbar"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_collapseMode="pin">
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_layout"
+        android:layout_gravity="fill_vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="বর্ণনা"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDark"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="চট্টগ্রাম বিশ্ববিদ্যালয়ের দক্ষিনে সবুজে ঘেড়া এই ক্যাম্পাসটি দর্শনার্থীদের জন্য এক আকর্ষনীয় স্থান। চারিদিকের প্রাকৃতিক সৌন্দর্যে মোহিত হয় হাজারো দর্শক।"
+                android:layout_gravity="left"
+                android:textSize="13dp"
+                android:textColor="@color/colorDark"
+                android:id="@+id/textView_spot_description"    />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/colorBorder"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="যাতায়ত পদ্ধতি"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDark"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="বিশ্ববিদ্যালয়ের জিরু পয়েন্ট থেকে রিকশা কিংবা সিএনজি অথবা টেম্পুতে করে খুব অল্প খরচে এখানে যাওয়া যাবে। তাছাড়া কয়েকজন একসাথে পায়ে হেটেও যাওয়া যাবে।"
+                android:layout_gravity="left"
+                android:textSize="13dp"
+                android:textColor="@color/colorDark"
+                android:id="@+id/textView_route_process"
+                />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_load_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@color/colorAsh"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="উফফ!! ইন্টারনেট কাজ করছে না"
+            android:textColor="#eb2a01"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="আপনার ইন্টারনেট কানেকশন চেক করুন এবং এখানে চাপুন"
+            android:textColor="@color/colorDark"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+</RelativeLayout>
