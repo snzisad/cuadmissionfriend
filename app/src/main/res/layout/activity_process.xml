@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/bg_layout"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="16dp"
     android:layout_height="match_parent"
     tools:context=".UnitDetails">
 
@@ -21,48 +21,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:background="@drawable/bg_item"
-                    android:layout_gravity="center_vertical"
-                    android:padding="1dp"
-                    android:src="@drawable/ic_process"
-                    android:layout_marginRight="5dp"/>
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="আবেদন পক্রিয়া"
-                    android:textColor="@color/colorDark"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/colorBorder"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="পদ্ধতি"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -72,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title_process"
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_unit_process"
                 />
@@ -82,16 +48,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/colorBorder"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="উদাহরণ"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -101,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="SSC 102030 2015 CHI HSC 304020 2018 CHI A,C,D এভাবে লিখে পাঠাতে হবে ১৬২২২ নম্বরে "
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_unit_process_example"
                 />

@@ -60,7 +60,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:padding="14dp"
             android:orientation="vertical">
 
             <TextView
@@ -68,8 +68,8 @@
                 android:layout_height="wrap_content"
                 android:text="বর্ণনা"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="চট্টগ্রাম বিশ্ববিদ্যালয়ের দক্ষিনে সবুজে ঘেড়া এই ক্যাম্পাসটি দর্শনার্থীদের জন্য এক আকর্ষনীয় স্থান। চারিদিকের প্রাকৃতিক সৌন্দর্যে মোহিত হয় হাজারো দর্শক।"
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_spot_description"    />
 
@@ -87,16 +87,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/colorBorder"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="যাতায়ত পদ্ধতি"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:text="বিশ্ববিদ্যালয়ের জিরু পয়েন্ট থেকে রিকশা কিংবা সিএনজি অথবা টেম্পুতে করে খুব অল্প খরচে এখানে যাওয়া যাবে। তাছাড়া কয়েকজন একসাথে পায়ে হেটেও যাওয়া যাবে।"
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_route_process"
                 />

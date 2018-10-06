@@ -57,6 +57,7 @@ public class PostView extends AppCompatActivity {
     AlertDialog alertDialog;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -294,6 +295,12 @@ public class PostView extends AppCompatActivity {
         }
 
         showComment();
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, Blog.class));
+        finish();
     }
 
 }

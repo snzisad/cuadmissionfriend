@@ -31,6 +31,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -118,6 +119,9 @@ public class Blog extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(checkEditText()){
+                    //first unsubscribe to topic so that the user who are posting can't receive his own post's notification
+                    FirebaseMessaging.getInstance().unsubscribeFromTopic("Post");
+
                     sendDataToServer();
                 }
             }
@@ -177,9 +181,16 @@ public class Blog extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, APILink.add_post, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                try {
+                    JSONObject message = new JSONObject(response);
+                    Toast.makeText(context, message.getString("message"), Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 getDataFromServer();
                 alertDialog.cancel();
                 requestQueue.stop();
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -213,6 +224,8 @@ public class Blog extends AppCompatActivity {
 
         requestQueue.add(stringRequest);
 
+        //again subscribe to topic
+        FirebaseMessaging.getInstance().subscribeToTopic("Post");
     }
 
     private void addDataInLayout(){
@@ -277,5 +290,12 @@ public class Blog extends AppCompatActivity {
         }
 
         return result;
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }

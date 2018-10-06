@@ -27,7 +27,7 @@ public class PictureView extends AppCompatActivity {
         progressBar_picture = findViewById(R.id.progressBar_picture);
 
         Picasso.get()
-                .load(APILink.image_url)
+                .load(APILink.image_url2)
                 .into(imageView_picture, new Callback() {
                     @Override
                     public void onSuccess() {

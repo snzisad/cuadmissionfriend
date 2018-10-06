@@ -2,8 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+ <item android:id="@+id/share"
+     android:title="শেয়ার করুন"
+     app:showAsAction="never">
+ </item>
+
+ <item android:id="@+id/rate"
+     android:title="রেটিং দিন"
+     app:showAsAction="never">
+ </item>
+
  <item android:id="@+id/about"
-     android:title="About"
+     android:title="আমাদের সম্পর্কে"
      app:showAsAction="never">
 
  </item>

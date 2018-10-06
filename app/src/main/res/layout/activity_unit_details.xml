@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/bg_layout"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="16dp"
     android:layout_height="match_parent"
     tools:context=".UnitDetails">
 
@@ -21,49 +21,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:background="@drawable/bg_item"
-                    android:layout_gravity="center_vertical"
-                    android:padding="3dp"
-                    android:src="@drawable/ic_circular"
-                    android:layout_marginRight="5dp"/>
-
-
-                <TextView
-                    android:id="@+id/textView_unit_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="A Unit"
-                    android:textColor="@color/colorDark"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/colorBorder" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="বিষয়"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -73,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="Computer Science and Engineering, Electrical and Electronics Engineering, পদার্থ বিজ্ঞান, রসায়ন বিজ্ঞান, পরিসংখ্যান ..."
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_unit_subject"
                 />
@@ -81,8 +45,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBorder" />
 
             <TextView
@@ -90,8 +54,8 @@
                 android:layout_height="wrap_content"
                 android:text="আবেদন যোগ্যতা"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -101,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:text="SSC বা সমমানের পরীক্ষায় বিজ্ঞান বিভাগ থেকে নূন্যতম ৩.৫০ এবং HSC বা সমমানের পরীক্ষায় বিজ্ঞান বিভাগ থেকে নূন্যতম ৩.০০ সহ সর্বমোট ৭.০০ থাকতে হবে।"
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_unit_qualification"
                 />
@@ -109,8 +73,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBorder" />
 
             <TextView
@@ -118,8 +82,8 @@
                 android:layout_height="wrap_content"
                 android:text="পরীক্ষার বিষয় (নম্বর)"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -129,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:text="বাংলা(১০), ইংরেজী(১০), পদার্থ বিজ্ঞান/রসায়ন বিজ্ঞান/উদ্ভীদ বিজ্ঞান/প্রানী বিজ্ঞান/পরিসংখ্যান/ICT যেকোন ৪ টি(৮০)। বাংলা এবং ইংরেজী থেকে ১০ করে প্রশ্ন থাকবে। অন্যান্য বিষয়গুলো থেকে ২০ টি করে প্রশ্ন থাকবে। পরীক্ষার্থীকে অবশ্যই বাংলা এবং ইংরেজী বিষয়ের প্রশ্নগুলো উত্তর করতে হবে। বাকি ৬ টি বিষয় থেকে যেকোন ৪ টি বিষয় উত্তর করতে হবে।"
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_unit_exam_subject"
                 />
@@ -137,8 +101,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBorder" />
 
             <TextView
@@ -146,8 +110,8 @@
                 android:layout_height="wrap_content"
                 android:text="নম্বর বিভাজন"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -158,7 +122,7 @@
                 android:text="প্রতিটি পরীক্ষার্থীকে ১২০ নম্বরের মাধ্যমে যাচায় করা হবে। এর মধ্যে ১০০ নম্বরের নৈর্ব্যক্তিক পরীক্ষা অনুষ্টিত হবে। বাকি ২০ নম্বর পরীক্ষার্থীর SSC/সমমান এবং HSC/সমমানের পরীক্ষায় প্রাপ্ত জিপিএ থেকে হিসাব করা হবে।
 ফর্মুলা হলঃ SSC/সমমানের GPA*১.৫+HSC/সমমানের GPA*২.৫"
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_unit_number_system"
                 />
@@ -166,8 +130,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/colorBorder" />
 
             <TextView
@@ -175,8 +139,8 @@
                 android:layout_height="wrap_content"
                 android:text=" পাশ নম্বর"
                 android:layout_gravity="left"
-                android:layout_marginBottom="5dp"
-                android:textSize="13dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorDark"
                 />
@@ -186,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:text=" বাংলা ৩, ইংরেজি ৪,  অন্য ৪ বিষয়ে ১০*৪ = ৪০ । মোট ৪৭"
                 android:layout_gravity="left"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 android:textColor="@color/colorDark"
                 android:id="@+id/textView_unit_pass_mark"
                 />

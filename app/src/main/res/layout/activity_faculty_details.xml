@@ -58,14 +58,14 @@
             android:scrollbars="none">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:padding="15dp"
                     android:id="@+id/layout_faculty_details"
                     android:orientation="vertical">
 
@@ -74,8 +74,8 @@
                         android:layout_height="wrap_content"
                         android:text="বর্ণনা"
                         android:layout_gravity="left"
-                        android:layout_marginBottom="5dp"
-                        android:textSize="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="16dp"
                         android:textStyle="bold"
                         android:textColor="@color/colorDark"
                         />
@@ -85,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:text="লাল দালান নামে পরিচিত এই অনুষধটি চট্টগ্রাম বিশ্ববিদ্যালয়ের কেন্দ্রীয় পাঠাগার এর পাশে অবস্থিত। যদিও ১৯৯৬ সাল থেকে অন্য অনুষধ থেকে যাত্রা শুরু হয়, ২০০০ সাল থেকে থেকে এটি আনুষ্টানিক ভাবে Computer Science and Engineering এবং Applied Physics and Communication Engineering এই দুই বিভাগ নিয়ে নিজস্ব ভবনে যাত্রা শুরু করে। পরবর্তীতে Applied Physics and Communication Engineering এর নাম পরিবর্তন করে Electrical and Electronics Engineering নামকরন করা হয়"
                         android:layout_gravity="left"
-                        android:textSize="13dp"
+                        android:textSize="16dp"
                         android:textColor="@color/colorDark"
                         android:id="@+id/textView_faculty_description"    />
 
@@ -93,17 +93,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="3dp"
                         android:background="@color/colorBorder"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginTop="8dp"/>
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"/>
 
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="বিভাগ (২টি)"
+                        android:text="বিভাগ"
                         android:layout_gravity="left"
-                        android:layout_marginBottom="5dp"
-                        android:textSize="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="16dp"
                         android:textStyle="bold"
                         android:textColor="@color/colorDark"
                         />
@@ -113,7 +113,7 @@
                         android:layout_height="wrap_content"
                         android:text="Computer Science and Engineering এবং Electrical and Electronics Engineerng"
                         android:layout_gravity="left"
-                        android:textSize="13dp"
+                        android:textSize="16dp"
                         android:textColor="@color/colorDark"
                         android:id="@+id/textView_faculty_dept"
                         />
@@ -122,16 +122,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="3dp"
                         android:background="@color/colorBorder"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginTop="8dp"/>
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="যাতায়ত পদ্ধতি"
                         android:layout_gravity="left"
-                        android:layout_marginBottom="5dp"
-                        android:textSize="13dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="16dp"
                         android:textStyle="bold"
                         android:textColor="@color/colorDark" />
 
@@ -140,7 +140,7 @@
                         android:layout_height="wrap_content"
                         android:text="বিশ্ববিদ্যালয়ের জিরু পয়েন্ট থেকে রিকসা কিংবা সিএনজি অথবা টেম্পুতে করে সহজেই যাওয়া যাবে। তাছাড়া পায়ে হেটেও সর্বোচ্চ ১০ মিনিটের মধ্যে এখানে পৌঁছানো যাবে।"
                         android:layout_gravity="left"
-                        android:textSize="13dp"
+                        android:textSize="16dp"
                         android:textColor="@color/colorDark"
                         android:id="@+id/textView_route_process"
                         />

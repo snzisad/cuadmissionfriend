@@ -13,6 +13,7 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -21,51 +22,47 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Circular"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".Faculty"
-            android:parentActivityName=".MainActivity"/>
-
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Blog"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".TouristSpot"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".FacultyDetails"
             android:parentActivityName=".Faculty"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
         <activity
             android:name=".UnitDetails"
             android:parentActivityName=".Circular" />
-
         <activity
             android:name=".Process"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".SpotDetails"
             android:parentActivityName=".TouristSpot"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
         <activity
             android:name=".PostView"
-            android:parentActivityName=".Blog" />
+            android:parentActivityName=".Blog">
+            <intent-filter>
+                <action android:name="com.adnroid.bstech.cuadmissionfriend.postView" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".PictureView"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
@@ -75,23 +72,20 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".LocationMap">
+            android:name=".LocationMap"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".GoogleMap"
+            android:parentActivityName=".MainActivity" />
 
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+        <service android:name=".HelperClass.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
-        <activity android:name=".GoogleMap"
-            android:parentActivityName=".MainActivity">
-
-             <!--<intent-filter>-->
-                 <!--<action android:name="android.intent.action.MAIN" />-->
-
-                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
-             <!--</intent-filter>-->
-        </activity>
+        <activity android:name=".About"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

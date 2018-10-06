@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CUAdmissionFriendAndroid.iml" filepath="$PROJECT_DIR$/CUAdmissionFriendAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cuadmissionfriend-master.iml" filepath="$PROJECT_DIR$/cuadmissionfriend-master.iml" />
+      <module fileurl="file://Z:\Project\Android Project\CUAdmissionFriendAndroid\cuadmissionfriend-master.iml" filepath="Z:\Project\Android Project\CUAdmissionFriendAndroid\cuadmissionfriend-master.iml" />
     </modules>
   </component>
 </project>

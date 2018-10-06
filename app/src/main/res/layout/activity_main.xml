@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context="com.adnroid.bstech.cuadmissionfriend.MainActivity">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +23,10 @@
                 android:id="@+id/cardView_latest_post_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone">
+                android:clickable="true"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                android:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -34,13 +38,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:padding="3dp"
+                        android:padding="8dp"
                         android:text="সর্বশেষ পোষ্ট"
-                        android:textSize="14dp" />
+                        android:textSize="16dp" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="2dp"
                         android:background="@color/colorAsh" />
 
                     <TextView
@@ -48,17 +52,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:paddingBottom="2dp"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="2dp"
+                        android:padding="10dp"
                         android:text="বাংলা মনে রাখার সহজ ৫ টি উপায় যা ভর্তি পরীক্ষার জন্য সহায়ক হতে পারে"
                         android:textColor="@color/colorDark"
-                        android:textSize="13dp" />
+                        android:textSize="16dp" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="2dp"
                         android:background="@color/colorAsh" />
 
                     <TextView
@@ -67,10 +68,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
                         android:gravity="right"
-                        android:padding="3dp"
+                        android:padding="8dp"
                         android:text="বিস্তারিত পড়ুন"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="13dp" />
+                        android:textSize="15dp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -79,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -123,14 +124,15 @@
             android:layout_height="30dp"
             android:layout_gravity="center_horizontal"
             android:progress="@integer/status_bar_notification_info_maxnum"
-                 android:layout_margin="20dp"
+            android:layout_margin="20dp"
             android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -141,35 +143,37 @@
                         android:id="@+id/cardView_circular_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
+                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@color/colorLight"
                         android:clickable="true"
-                        android:foreground="?android:selectableItemBackground">
+                        android:foreground="?android:selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
                             android:background="@color/colorLight"
-                            android:padding="8dp">
+                            android:orientation="vertical"
+                            android:paddingBottom="22dp"
+                            android:paddingTop="23dp">
 
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
-                                android:background="@drawable/bg_item"
-                                android:padding="8dp"
                                 android:src="@drawable/ic_circular" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="8dp"
                                 android:text="সার্কুলার"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="14dp"
+                                android:textColor="@color/colorDark"
+                                android:textSize="15sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
@@ -178,77 +182,81 @@
                         android:id="@+id/cardView_process_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
+                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@color/colorLight"
                         android:clickable="true"
-                        android:foreground="?android:selectableItemBackground">
+                        android:foreground="?android:selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:background="@color/colorLight"
-                            android:padding="8dp">
+                            android:orientation="vertical"
+                            android:paddingBottom="20dp"
+                            android:paddingTop="20dp">
 
                             <ImageView
-                                android:layout_width="40dp"
-                                android:layout_height="40dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_gravity="center_horizontal"
-                                android:background="@drawable/bg_item"
-                                android:padding="5dp"
                                 android:src="@drawable/ic_process" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="8dp"
                                 android:text="আবেদন পদ্ধতি"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="14dp"
+                                android:textColor="@color/colorDark"
+                                android:textSize="15sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="10"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/cardView_faculty_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
+                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@color/colorLight"
                         android:clickable="true"
-                        android:foreground="?android:selectableItemBackground">
+                        android:foreground="?android:selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:background="@color/colorLight"
-                            android:padding="8dp">
+                            android:orientation="vertical"
+                            android:paddingBottom="20dp"
+                            android:paddingTop="20dp">
 
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
-                                android:background="@drawable/bg_item"
-                                android:padding="8dp"
                                 android:src="@drawable/ic_faculty" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="8dp"
                                 android:text="ফ্যাকাল্টি"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="14dp"
+                                android:textColor="@color/colorDark"
+                                android:textSize="15sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
@@ -257,77 +265,85 @@
                         android:id="@+id/cardView_blog_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
+                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@color/colorLight"
                         android:clickable="true"
-                        android:foreground="?android:selectableItemBackground">
+                        android:foreground="?android:selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:background="@color/colorLight"
-                            android:padding="8dp">
+                            android:orientation="vertical"
+                            android:paddingBottom="20dp"
+                            android:paddingTop="20dp">
 
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
-                                android:background="@drawable/bg_item"
-                                android:padding="8dp"
+
+
                                 android:src="@drawable/ic_post" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="8dp"
                                 android:text="ব্লগ পোষ্ট"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="14dp"
+                                android:textColor="@color/colorDark"
+                                android:textSize="15sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="10"
                     android:orientation="horizontal">
 
                     <android.support.v7.widget.CardView
                         android:id="@+id/cardView_route_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
+                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@color/colorLight"
                         android:clickable="true"
-                        android:foreground="?android:selectableItemBackground">
+                        android:foreground="?android:selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:background="@color/colorLight"
-                            android:padding="8dp">
+                            android:orientation="vertical"
+                            android:paddingBottom="20dp"
+                            android:paddingTop="20dp">
 
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
-                                android:background="@drawable/bg_item"
-                                android:padding="8dp"
+
+
                                 android:src="@drawable/ic_map" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="8dp"
                                 android:text="যাতায়ত ম্যাপ"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="14dp"
+                                android:textColor="@color/colorDark"
+                                android:textSize="15sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
@@ -336,35 +352,37 @@
                         android:id="@+id/cardView_spot_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
+                        android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@color/colorLight"
                         android:clickable="true"
-                        android:foreground="?android:selectableItemBackground">
+                        android:foreground="?android:selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal|center_vertical"
                             android:background="@color/colorLight"
-                            android:padding="8dp">
+                            android:orientation="vertical"
+                            android:paddingBottom="20dp"
+                            android:paddingTop="20dp">
 
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:layout_gravity="center_horizontal"
-                                android:background="@drawable/bg_item"
-                                android:padding="8dp"
                                 android:src="@drawable/ic_tourist_spot" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="8dp"
                                 android:text="দর্শনীয় স্থান"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="14dp"
+                                android:textColor="@color/colorDark"
+                                android:textSize="15sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>

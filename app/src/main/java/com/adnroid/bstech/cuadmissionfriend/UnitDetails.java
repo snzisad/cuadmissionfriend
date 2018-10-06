@@ -25,7 +25,7 @@ import org.json.JSONObject;
 import java.lang.reflect.Method;
 
 public class UnitDetails extends AppCompatActivity {
-    TextView textView_unit_subject, textView_unit_qualification, textView_unit_number_system, textView_unit_exam_subject, textView_unit_pass_mark, textView_unit_name;
+    TextView textView_unit_subject, textView_unit_qualification, textView_unit_number_system, textView_unit_exam_subject, textView_unit_pass_mark;
 
     ScrollView scrollView_unit_details;
     ProgressBar progressBar;
@@ -49,7 +49,6 @@ public class UnitDetails extends AppCompatActivity {
     }
 
     private void initializeGlobalVariables(){
-        textView_unit_name = (TextView) findViewById(R.id.textView_unit_name);
         textView_unit_exam_subject = (TextView) findViewById(R.id.textView_unit_exam_subject);
         textView_unit_number_system = (TextView) findViewById(R.id.textView_unit_number_system);
         textView_unit_qualification = (TextView) findViewById(R.id.textView_unit_qualification);
@@ -77,12 +76,11 @@ public class UnitDetails extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    textView_unit_name.setText(response.getString("unit_name"));
                     textView_unit_subject.setText(response.getString("subject"));
                     textView_unit_number_system.setText(response.getString("number_calculation_process"));
                     textView_unit_qualification.setText(response.getString("application_qualification"));
                     textView_unit_exam_subject.setText(response.getString("exam_subject"));
-//                    textView_unit_pass_mark.setText(response.getString("pass_mark"));
+                    textView_unit_pass_mark.setText(response.getString("pass_mark"));
 
                     showScrollView();
                     requestQueue.stop();

@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:text="মন্তব্য করুন"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/bg_button_background"
             android:textColor="@color/colorLight"
             android:layout_margin="8dp"
             android:layout_gravity="right"

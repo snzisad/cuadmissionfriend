@@ -3,6 +3,7 @@ package com.adnroid.bstech.cuadmissionfriend;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +26,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -53,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
         //get all location details
 //        getLocationInfo();
+
+        //subscribe to toic to get notification
+        FirebaseMessaging.getInstance().subscribeToTopic("Post");
     }
 
     private void initialize_global_variables(){
@@ -72,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handle_on_click(){
-        textView_view_full_post.setOnClickListener(new View.OnClickListener() {
+        cardView_latest_post_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, PostView.class));
@@ -147,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
                     //set variable data to textview
                     textView_latest_post_title.setText(title);
                     IDCollection.postID = id;
+                    IDCollection.title = title;
 
                     //hide or show content
                     progressBar_latest_post.setVisibility(View.GONE);
@@ -222,9 +230,40 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.about:
-                Toast.makeText(context, "This is about page", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, About.class));
+                break;
+
+            case R.id.share:
+                shereToFriend ();
+                break;
+
+            case R.id.rate:
+                try{
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.adnroid.bstech.cuadmissionfriend")));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.adnroid.bstech.cuadmissionfriend")));
+                }
                 break;
         }
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+        System.exit(0);
+        finish();
+    }
+
+    private void shereToFriend(){
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBodyText = "চট্টগ্রাম বিশ্ববিদ্যালয়য়ের ভর্তি পরীক্ষা নিয়ে দারুন একটা অ্যাপ প্লেস্টোরে পাওয়া যাচ্ছে। এখনই ডাউনলোড করে ৫* রেটিং দিন এবং সবার মাঝে ছড়িয়ে দিন। ডাউনলোড করতে ক্লিক করুনঃ https://play.google.com/store/apps/details?id=com.adnroid.bstech.cuadmissionfriend";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"ডাউনলোড করুন এখনই");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
+        startActivity(Intent.createChooser(sharingIntent, "শেয়ার করুন"));
     }
 }
